@@ -18,27 +18,37 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  - RV Wish List
+  
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  - Compare your dream RVs all in one place!
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  - A wishlist to store all the information on RVs you are looking to buy and compare them in one place. So you don't have to bookmark on pininterest, save links and browse through multiple sources and make your own spreadsheet to make a decision.  
 
 ## Problem ##
   > Describe the problem your product solves.
+  - Nothing that allows users to store and compare information on Recreational Vehicles they are looking to buy in one place.  
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  - Filter, sort and visualize specs on RVs in one place to help them make the best decision. Users don't have to make their own spreadsheet and go to several sites and pages for the information. 
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  - Save, sort and see everything you want to, about ALL the RVs you're looking to buy, all in one place. 
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  -Just enter the link to the RV or enter some info in the form to start making a list of the RVs you're looking to buy. Then sort, filter and see which is the perfect RV for you.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  - This made my RV shopping so much easier. Before, I had to go each product webpage and had this massive bookmark list. I still didn't have a way to compare any specs on the RVs. But this app allowed me to compare everything in one place. It made my life so much easier having an organized, beautiful list that I can reference back to anytime I want, without having to go through 25 links. 
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  - You don't have to make an account to see the benefits of using this app. But signing up allows you to come back to your list anytime you want!  

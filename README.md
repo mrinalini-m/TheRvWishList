@@ -6,7 +6,7 @@
 You have 36 hours to produce something compelling using the skills you've honed over the past five weeks. 
 
 __Q:__ What are your inputs?
-<br>
+<br> 
 __A:__ 36 hours of (relatively) undivided attention
 
 __Q:__ What is the required output?
@@ -26,15 +26,14 @@ To build on your learning of core engineering concepts, we will begin thinking a
 <!--* [Lean Product Process](http://theleanstartup.com/principles) - Takes the essence of Agile Development methodology and applies it more broadly to the development of product and buiness models that support he requirements of the project.
 -->
 
-
 ## Basic Requirements
-- [ ] Fork the repo
+- [X] Fork the repo
 - Complete the README.md template (<30min)
-  - [ ] Pick an idea (implement a technology, build a product, make art, etc).
-  - [ ] Write it down on paper
-  - [ ] Imagine what portion of this could be done in 24 hours.
-  - [ ] Cut the scope in half.
-  - [ ] Cut the above scope in half again.
+  - [X] Pick an idea (implement a technology, build a product, make art, etc).
+  - [X] Write it down on paper
+  - [X] Imagine what portion of this could be done in 24 hours.
+  - [X] Cut the scope in half.
+  - [X] Cut the above scope in half again.
   - [ ] Fill in the README.md template document
 - [ ] Use iterative development (go straight to something that demos your idea)
 - [ ] Prepare for pitch @ demo on Tuesday
