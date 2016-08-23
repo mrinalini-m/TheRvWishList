@@ -1,0 +1,22 @@
+{
+  "name": "rv-wishlist",
+  "description": "### Overview:",
+  "main": "index.js",
+  "authors": [
+    "Mrinalini Manandhar"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mrinalini-m/MKS-SF-mvp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
