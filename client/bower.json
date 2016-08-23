@@ -1,0 +1,17 @@
+{
+  "name": "client",
+  "homepage": "https://github.com/mrinalini-m/MKS-SF-mvp",
+  "authors": [
+    "Mrinalini Manandhar <mrinalini.manandhar@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

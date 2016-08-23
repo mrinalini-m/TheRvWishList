@@ -38,5 +38,5 @@ client/lib/
 db/
 
 #notes
-private_notes.md
+private_notes.js
 angular_practice.html
