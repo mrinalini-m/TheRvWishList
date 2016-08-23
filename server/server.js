@@ -31,9 +31,9 @@ app.use(bodyParser.json()); //to parse data in get in format needed.
 app.use(express.static(__dirname + '/../client/')); // allow to load the static files in client. css..etc
 
 
-app.get('/', function(req, res) { //been replaced with express.static
-  res.send('GET request to the homepage.');
-});
+// app.get('/', function(req, res) { //been replaced with express.static
+//   res.send('GET request to the homepage.');
+// });
 
 app.get('/rvList', function(req, res) {
   RV.find({}, function(err, rvs) {

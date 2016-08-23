@@ -29,9 +29,9 @@ app.use(bodyParser.json()); //to parse data in get in format needed.
 app.use(express.static(__dirname + '/../client/')); // allow to load the static files in client. css..etc
 
 //Routes----------------------------------------------------
-// app.get('/', function(req, res) { //been replaced with express.static
-//   res.send('GET request to the homepage.');
-// });
+app.get('/', function(req, res) { //been replaced with express.static
+  res.redirect('/add');
+});
 
 app.get('/rvs', function(req, res) {
   RV.find({}, function(err, rvs) {
@@ -40,7 +40,7 @@ app.get('/rvs', function(req, res) {
 });
 
 
-app.post('/rvs', function(req, res) {
+app.post('/add', function(req, res) {
   // console.log(req.headers['Content-Type']);
   console.log(req.headers.origin, "REQ HEADERS ORIGIn ");
   console.log(req.body, 'BODYBODY'); //logs in terminal with the actual data

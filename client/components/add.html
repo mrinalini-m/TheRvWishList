@@ -1,14 +1,87 @@
-<div>
-{{listView}}
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li id="themes">
+      <a href="#/rvs">All RVs</a>
+    </li>
+    <li class="active">
+      <a href="#">Add an RV</a>
+    </li>
+  </ul>
+  
+</nav>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="well bs-component">
+      <form name="rvForm" class="form-horizontal" ng-submit="addRV(name, model, type, year, price)">
+        <div class="form-group">
+          <label for="name" class="col-lg-2 control-label">Name:</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="name" ng-model="name"><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="model" class="col-lg-2 control-label">Model:</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="model" ng-model="model"><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="type" class="col-lg-2 control-label">Type:</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="type" ng-model="type"><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="year" class="col-lg-2 control-label">Year:</label>
+          <div class="col-lg-10">
+            <input type="number" class="form-control" id="year" ng-model="year"><br>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="price" class="col-lg-2 control-label">Price:</label>
+          <div class="col-lg-10">
+            <input type="number" class="form-control" id="price" ng-model="price"><br>
+          </div>
+        </div>
+        <input type="Submit" name="Submit" class="btn btn-success btn-lg">
+      </form>
+    </div>
+  </div>
 </div>
 
-<form ng-submit="addRV(name, model, type, year, price)">
-  <label>Add New User</label><br>
-  Name: <input type="text" ng-model="name"><br>
-  Model: <input type="text" ng-model="model"><br>
-  Type: <input type="text" ng-model="type"><br>
-  Year: <input type="text" ng-model="year"><br>
-  Price: <input type="text" ng-model="price"><br>
-  <input type="Submit" name="Submit">
-</form>
+
+
+
+<!-- <div id='container'>
+  <nav class="navigation">
+    <ul>
+      <li>
+          <a href="#/links">Links</a>
+      </li>
+       <li>
+          <a class='selected' href="#/shorten">Shorten</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="creator">
+    <form name='shortlyForm' ng-submit="addLink()" novalidate>
+      <input name='link' type="url"
+        ng-model="link.url"
+        placeholder="Enter your url here" required
+        ng-class="{'error': shortlyForm.$invalid && shortlyForm.$dirty}"/>
+
+      <button type="submit" value="Shorten" ng-disabled='shortlyForm.$invalid'>
+        add
+      </button>
+    </form>
+    <div ng-if='shortlyForm.link.$error.required && shortlyForm.$dirty' class="message">
+      <h2>Url required</h2>
+    </div>
+    <div ng-show='shortlyForm.link.$error.url && shortlyForm.$dirty' class="message">
+      <h2>Not a valid url</h2>
+    </div>
+  </div>
+</div> -->
+
 

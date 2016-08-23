@@ -9,9 +9,12 @@ angular.module('rvwishlist', ['ngRoute'])
     templateUrl: 'components/rvList.html',
     controller: 'rvsController'
   })
-  .when('/', {
+  .when('/add', {
     templateUrl: 'components/add.html',
     controller: 'newRVController'
+  })
+  .otherwise({
+    redirectTo: '/add'
   })
 })
 .controller("rvsController", function($scope, $http) {
@@ -30,11 +33,16 @@ angular.module('rvwishlist', ['ngRoute'])
   $scope.addRV = function(name, model, type, year, price) {
     $http({
       method: 'POST',
-      url: '/rvs',
+      url: '/add',
       data: "name=" + name + "&model=" + model + "&type=" + type + "&year=" + year + "&price=" + price ,
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     })
     .then(function (resp) {
+      $scope.name = null;
+      $scope.model = null;
+      $scope.type = null;
+      $scope.year = null;
+      $scope.price = null;
       console.log(resp, "THIS DA RESPONSE")
     });
    }

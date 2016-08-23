@@ -1,3 +1,15 @@
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li id="themes">
+      <a href="#/rvs">All RVs</a>
+    </li>
+    <li class="active">
+      <a href="#">Add an RV</a>
+    </li>
+  </ul>
+  
+</nav>
+
 <div ng-repeat="rv in rvsList">
   <a href="#/rvs/{{rv._id}}">{{rv.name}}</a>
 </div>
