@@ -18,6 +18,8 @@ angular.module('rvwishlist', ['ngRoute'])
   })
 })
 .controller("rvsController", function($scope, $http) {
+  $scope.countId = 'countId';
+  var count = 1;
   $http({
     method: 'GET',
     url: 'http://localhost:3000/rvs'
@@ -27,7 +29,14 @@ angular.module('rvwishlist', ['ngRoute'])
   })
   .then(function(data) {
     $scope.rvsList = data;
-  });
+    return data;
+  }).then(function(data){
+    // console.log(data[0]);
+    for (var i=0; i <data.length; i++) {
+      data[i][$scope.countId] = count;
+      count++;
+    }
+  })
 })
 .controller("newRVController", function($scope, $http){
   $scope.addRV = function(name, model, type, year, price) {
