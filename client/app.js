@@ -22,7 +22,7 @@ angular.module('rvwishlist', ['ngRoute'])
   var count = 1;
   $http({
     method: 'GET',
-    url: 'http://localhost:3000/rvs'
+    url: '/rvs'
   })
   .then(function (resp) {
     return resp.data;
