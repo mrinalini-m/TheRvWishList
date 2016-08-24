@@ -11,6 +11,8 @@
       <form class="navbar-form navbar-left" role="search" style="float:right !important">
         <div class="form-group">
           <input ng-model="searchByName" type="text" class="form-control" placeholder="Search By Name">
+          <input ng-model="searchByModel" type="text" class="form-control" placeholder="Search By Model">
+          <input ng-model="searchByYear" type="text" class="form-control" placeholder="Search By Year">
         </div>
         <button type="submit" class="btn btn-success">Submit</button>
       </form>
@@ -30,16 +32,18 @@
             <th>Type</th>
             <th>Year</th>
             <th>Price</th>
+            <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr ng-repeat="rv in rvsList | filter:searchByName | orderBy:'rv.name'">
-            <td ng-model="countId">{{rv.countId}}</td>
+        <tbody ng-repeat="rv in rvsList | filter:{name: searchByName, model: searchByModel, year: searchByYear} | orderBy:'name'">
+          <tr>
+            <td>{{$index+1}}</td>
             <td style="font-weight:bold"><a href="#/rvs/{{rv._id}}">{{rv.name}}</a></td>
             <td>{{rv.model}}</td>
             <td>{{rv.type}}</td>
             <td>{{rv.year}}</td>
             <td>{{rv.price}}</td>
+            <td><a href="" ng-click=remove(rv)>X</a></td>
           </tr>
         </tbody>
       </table>

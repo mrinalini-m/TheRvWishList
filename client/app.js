@@ -1,5 +1,5 @@
-angular.module('rvwishlist', ['ngRoute'])
-.config(function($routeProvider) {
+angular.module('rvlist', ['ngRoute', 'uiGmapgoogle-maps'])
+.config(function($routeProvider, uiGmapGoogleMapApiProvider) {
   $routeProvider
   .when('/rvs/:id', {
     templateUrl: 'components/rv.html',
@@ -15,7 +15,12 @@ angular.module('rvwishlist', ['ngRoute'])
   })
   .otherwise({
     redirectTo: '/add'
-  })
+  });
+  uiGmapGoogleMapApiProvider.configure({
+    key: 'AIzaSyBdZj305mBq56LI29aDR8rJ3UIz9izdhCE', //Need to hide the api key
+    v: '3.20', //defaults to latest 3.X anyhow
+    libraries: 'weather,geometry,visualization'
+  });
 })
 .controller("rvsController", function($scope, $http) {
   $scope.countId = 'countId';
@@ -30,13 +35,24 @@ angular.module('rvwishlist', ['ngRoute'])
   .then(function(data) {
     $scope.rvsList = data;
     return data;
-  }).then(function(data){
-    // console.log(data[0]);
-    for (var i=0; i <data.length; i++) {
-      data[i][$scope.countId] = count;
-      count++;
-    }
-  })
+  });
+
+  $scope.remove = function(rv) {
+    // $http({
+    //   method: 'POST',
+    //   url: '/rvs/' + rv._id,
+    //   headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    // })
+    // .then(function (resp) {
+
+    $scope.rvsList.forEach(function(item, index) {
+      if(item._id === rv._id) {
+        $scope.rvsList.splice(index, 1);
+      }
+    })
+    // });
+
+  }
 })
 .controller("newRVController", function($scope, $http){
   $scope.addRV = function(name, model, type, year, price) {
@@ -52,13 +68,13 @@ angular.module('rvwishlist', ['ngRoute'])
       $scope.type = null;
       $scope.year = null;
       $scope.price = null;
-      console.log(resp, "THIS DA RESPONSE")
     });
    }
 })
 
 .controller('rvController', function($scope, $http, $location) {
-  console.log($location);
+  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8, id:1 };
+  $scope.coords = { latitude: 45, longitude: -73 }
   var path = $location.$$path;
   $http({
     method: 'GET',
@@ -72,3 +88,16 @@ angular.module('rvwishlist', ['ngRoute'])
   });
 });
 
+  // var geocoder;
+  // var map;
+
+  // function codeAddress() {
+  //   geocoder = new google.maps.Geocoder();
+  //   // var address = document.getElementById('address').value;
+  //   var address = '2135 Railroad Ave, Hercules, CA 94547';
+  //   geocoder.geocode( { 'address': address}, function(results, status) {
+  //     console.log(results[0].geometry.location.lat());
+  //   });
+  // }
+
+  // codeAddress()

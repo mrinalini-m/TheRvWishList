@@ -1,17 +1,20 @@
 
 <!DOCTYPE html>
-<html lang="en" ng-app='rvwishlist'>
+<html lang="en" ng-app='rvlist'>
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RV Wishlist</title>
+  <title>RV List</title>
   <link rel="stylesheet" type="text/css" href="lib/css/style.css">
 </head>
 <body class>
-  <h1>The RV Wishlist</h1>
+  <h1>The RV List</h1>
   <div ng-view> </div>
+    <script src="/lib/lodash/dist/lodash.min.js"></script>
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
   </div>

@@ -1,32 +1,13 @@
 var express = require('express');
+var RV = require('./products/productModel.js');
 var mongoose = require('mongoose');
-var morgan = require('morgan');
-var bodyParser= require('body-parser');
 
 var app = express();
 
-//DBModel--------------------------------------------------
-var mongoose = require('mongoose');
 //config mongoose
 mongoose.connect('mongodb://localhost/rvwishlistdb')
+require('./config/middleware.js')(app, express);
 
-//Database model;
-var rvSchema = mongoose.Schema({
-  name: String,
-  model: String,
-  type: String,
-  year: Number,
-  price: Number
-  // img: url to be added later
-});
-
-var RV = mongoose.model('RV', rvSchema);
-
-//Middleware----------------------------------------------------
-app.use(morgan('dev')); //to see routes when running nodemon
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json()); //to parse data in get in format needed.
-app.use(express.static(__dirname + '/../client/')); // allow to load the static files in client. css..etc
 
 //Routes----------------------------------------------------
 app.get('/', function(req, res) { //been replaced with express.static
@@ -62,7 +43,6 @@ app.post('/add', function(req, res) {
 });
 
 app.get('/rvs/:id', function(req, res) {
-  console.log(req.params);
   RV.findOne({_id: req.params.id }, function(err, rv) {
     res.json(rv);
   });
